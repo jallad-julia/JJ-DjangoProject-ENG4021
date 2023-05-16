@@ -1,0 +1,32 @@
+<html> 
+  <body>
+    <h1> Técnicos do Rio Beach Volley Leblon</h1>
+  </body>
+<ul>
+{% for tecnico in todosTecnicos %}
+  <li> {{tecnico.title}} 
+    <a href="https://atividade-06-github-e-documentacao-juliajallad--eng4021-2023-1.repl.co/tecnicos/edit/{{ tecnico.id }}" target= "_blank">Editar</a><br><br>
+ 
+    <a href="https://atividade-06-github-e-documentacao-juliajallad--eng4021-2023-1.repl.co/tecnicos/delete/{{ tecnico.id }}" target= "_blank">Remover</a><br><br>
+  </li>
+  <li> {{tecnico.lastname}}</li>
+  <li> {{tecnico.entradanoct}}</li>
+  <li> {{tecnico.pagamento}}</li>
+  {% endfor %}
+</ul>
+
+<ol>
+  {% for atleta in atletasRanking %}
+  <li> {{atleta.title}}</li>
+   <a href="https://atividade-06-github-e-documentacao-juliajallad--eng4021-2023-1.repl.co/atletas/edit/{{ atleta.id }}" target= "_blank">Editar</a><br><br>
+ 
+  <a href="https://atividade-06-github-e-documentacao-juliajallad--eng4021-2023-1.repl.co/atletas/delete/{{ atleta.id }}" target= "_blank">Remover</a><br><br>
+  <li> {{atleta.lastname}}</li>
+  <li> {{atleta.aniversario}}</li>
+  <li> {{atleta.primeiraparticipacao}}</li>
+  {% endfor %}
+</ol>
+
+</html>
+
+

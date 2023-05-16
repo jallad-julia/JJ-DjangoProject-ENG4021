@@ -1,0 +1,32 @@
+" Arquivo para colocar configurações estéticas do texto, como cor da letra e fonte."
+html {
+  height: 100%;
+  width: 100%;
+}
+
+h1{
+  font-family: 'PT+Sans';
+  color: #1b88ee;
+}
+
+h3{
+  font-family: 'Roboto';
+  color: #26c3f7;
+}
+
+
+b{
+  font-family: 'Roboto';
+  color: #26c3f7;
+}
+
+.texto-descricao{
+  font-family: 'Open+Sans';
+  color: #1f1e1e;
+}
+
+a{
+  font-family: 'Bebas Neue';
+  color: #1f1e1e;}
+
+

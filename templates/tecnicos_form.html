@@ -1,0 +1,25 @@
+<form method= "post">  #método 'post' é necessário para que dados cadastrados sejam salvos após a página ser reiniciada. 
+  {%csrf_token %} #mecanismo de segurança exigido pelo Django
+  <div>
+    <label> Nome </label>
+    <input type= "text" name= "title" >
+  </div>
+
+  <div> 
+    <label> Sobrenome </label>
+    <textarea name= "lastname" > </textarea>
+  </div>
+    
+  <div>
+    <label> Entrada no CT </label>
+    <input type= "date" name= "entradanoCT" >
+  </div>
+    
+    <div> 
+      <input type= "checkbox" name= "pagamento" >
+      <label> Pagamento realizado </label>
+    </div>
+  <input type= "submit">
+  
+</form>
+

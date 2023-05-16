@@ -1,0 +1,24 @@
+<form method= "post">
+  {%csrf_token %}
+  <div>
+    <label> Nome </label>
+    <input type= "text" name= "title"  value= "{{tecnico.title}}">
+  </div>
+
+  <div> 
+    <label> Sobrenome </label>
+    <textarea name= "lastname" value="{{tecnico.lastname}"" > </textarea>
+  </div>
+    
+  <div>
+    <label> Entrada no CT </label>
+    <input type= "date" name= "entradanoCT" value="{{tecnico.entradanoct}}">
+  </div>
+    
+    <div> 
+      <input type= "checkbox" name= "pagamento" {% if task.done== True %} checked {%endif %} >
+      <label> Pagamento realizado </label>
+    </div>
+  <input type= "submit">
+  
+</form>

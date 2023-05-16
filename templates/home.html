@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+{% load static %}   
+<head>
+  <title> Julia Kéde Lima Jallad </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=PT+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="{%static 'css/style.css' %}">
+</head>
+  
+<body>
+  <h1> Rio Beach Volley Leblon  </h1>
+  <h3> Quem Somos? </h3>
+    <p class='texto-descricao'>
+        Somos um centro de treinamento de Vôlei de Praia focado em atletas de alto rendimento.
+    </p>
+
+  <h3> Onde estamos? </h3>
+  <p class='texto-descricao'> 
+     Nosso CT está localizado no posto 11, na orla da praia do Leblon no Rio de Janeiro. Somos abençoados por essa vista diariamente! <br><br>
+    <img width="200px" src= 'https://media-cdn.tripadvisor.com/media/photo-s/07/eb/79/01/caption.jpg'>
+  </p>
+  
+  
+  <h3> Conheça nossa equipe! </h3>
+  <p class= 'texto-descricao'>
+    Nossa equipe é formada por profissionais de Educação Física, dentre estes alguns com certificação nível 3 (máximo) da CBV de vôlei de praia, e também por estagiários da área. 
+    
+  </p>
+    
+    
+  
+    <h2> Técnicos do Rio Beach Volley Leblon</h2>
+<ul class= 'texto-descricao'>
+{% for tecnico in todosTecnicos %}
+  <li> {{tecnico.title}}</li>
+  <li> {{tecnico.lastname}}</li>
+  <li> {{tecnico.entradanoct}}</li>
+  <li> {{tecnico.pagamento}}</li>
+  {% endfor %}
+</ul>
+  
+
+  
+   <h3> Como é o nosso dia a dia? </h3>
+  <p class='texto-descricao'>
+    Oferecemos treinos com pequenos grupos de até 6 pessoas, com o objetivo de atender as demandas de cada aluno. Modelamos os treinos com base no nível e estágio de aprendizado de cada grupo, sempre preparando nossos atletas para a participação em campeonatos regionais e nacionais. 
+    Veja mais sobre algumas das competições nacionais que participamos no link:
+    <a href= "https://voleidepraia.cbv.com.br/circuitos"  target= "_blank">Circuitos-CBV</a><br><br>
+    
+      Também organizamos campeonatos internos ao final do ano, visando a integração dos atletas de diferentes grupos.
+      Veja o pódio do nosso último campeonato Rainha da Praia (2022):
+
+#Nessa lista, são enumerados os atributos de cada objeto criado no modelo Ranking.
+       <h2> Ranking torneio feminino </h2>
+<ol>
+  {% for atleta in atletasRanking %}
+  <li> {{atleta.title}}</li>
+  <li> {{atleta.lastname}}</li>
+  <li> {{atleta.aniversario}}</li>
+  <li> {{atleta.primeiraparticipacao}}</li>
+  {% endfor %}
+</ol>
+
+    
+  </p>
+
+  <b> Fale Conosco! </b>
+  <ul class= 'texto-descricao'>
+  <li> (21) 99899-5454 <i> (Whatsapp) </i> </li>
+  <li> @riobeachvolleyleblon <i> (Instagram) </i></li>
+</ul> <br><br> 
+  
+<caption> Gostaria de se juntar a nós? Abaixo você pode ver os horários disponíveis de acordo com nível e faixa etária.   </caption> <br><br>
+  
+<table border= "1"> 
+  <thead>
+    <tr> 
+      <th> Dia </th>
+      <th> Horário </th>
+      <th> Nível </th>
+    </tr>
+    <tr> 
+      <td> Segundas/Quartas </td> 
+      <td> 7h-8h </td>
+      <td> Adulto Fem/Masc Intermediário </td> 
+    </tr>
+    <tr> 
+      <td> Segundas/Quartas </td>
+      <td> 8h-9h </td>
+      <td> Adulto Fem Iniciante </td>
+    </tr>
+    <tr> 
+      <td> Segundas/Quartas </td>
+      <td> 16h-17h </td>
+      <td> Turma Baby <small> (5 a 8 anos) </small> </td>
+    </tr>
+    <tr> 
+      <td> Segundas/Quartas </td>
+      <td> 17h-18h </td>
+      <td> Infanto Intermediário Masc  </td>
+    </tr>
+    <tr> 
+      <td> Terças/Quintas </td>
+      <td> 7h-8h </td>
+      <td> Adulto Masc Iniciante </td>
+    </tr>
+    <tr> 
+      <td> Terças/Quintas </td>
+      <td> 8h-9h </td>
+      <td> Infantil Iniciante <small> (8 a 10 anos) </small> </td>
+    </tr>
+    <tr> 
+      <td> Terças/Quintas </td>
+      <td> 16h-17h </td>
+      <td> Infanto Intermediário Fem </td>
+    </tr>
+    <tr> 
+      <td> Terças/Quintas </td>
+      <td> 17h-18h </td>
+      <td> Infanto iniciante </td>
+    </tr>
+  </thead>
+</table>
+  
+<p class='texto-descricao'>
+  Gostaria de outro horário ou nível ? Os demais horários estão reservados para níveis mais avançados, nos contate para mais informações a respeito de tais turmas. Também estamos abertos para criação de novas turmas. 
+</p> <br><br>
+  
+</body>
+    
+  
+</html>
+
